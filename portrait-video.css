@@ -41,7 +41,7 @@ body:after {
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  top: 15%
+  bottom: 30%
 }
 .nav-left { left: 15%; }
 .nav-right { right: 15%; }
@@ -83,7 +83,6 @@ body:after {
   background-color: #000000;
   text-shadow: none;
   opacity: 0.25;
-  /* animation: text-reveal 10s linear infinite; */
 }
 
 @keyframes text-reveal {
@@ -102,4 +101,21 @@ body:after {
 @keyframes moon-reveal {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media (max-width: 1000px) {
+  .hero h1 { font-size: 3em; }
+  .hero img { height: 80%; }
+  .hero video { bottom: 20%; } /*{ top: 15%; width: 70%; } */
+  .nav-left a, .nav-right a { font-size: 1.2em; margin: 20px; }
+  .nav-left, .nav-right { bottom: 25%; }
+
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2em;}
+  .hero img { height: 50%; }
+  .hero video { bottom: 0; }
+  .nav-left a, .nav-right a { font-size: .8em; margin: 10px; }
+  .nav-left, .nav-right { bottom: 15%; }
+
 }
